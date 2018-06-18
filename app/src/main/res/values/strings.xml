@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Music App</string>
+    <string name="rockNroll">Rock and Roll</string>
+    <string name="country">Country</string>
+    <string name="rhythmNBlues">Rhythm and Blues</string>
+    <string name="rap">Rap</string>
+    <string name="now_playing">Now Playing</string>
+</resources>
