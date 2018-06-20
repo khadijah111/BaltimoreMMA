@@ -14,19 +14,19 @@ public class Rap extends AppCompatActivity {
         setContentView(R.layout.song_list);
 
         //create an arraylist and add the Artist and Title
-        ArrayList <Details> music = new ArrayList <>();
-        music.add(new Details (R.drawable.ericb,"Eric B. & Rakim", "Don't Sweat The Technique", R.drawable.playbutton));
-        music.add(new Details(R.drawable.twochainz,"2 Chains", "Bigger Than You", R.drawable.playbutton));
-        music.add(new Details(R.drawable.kanye,"Kanye West", "All Mine", R.drawable.playbutton));
-        music.add(new Details(R.drawable.lilbaby,"Lil Baby", "Yes Indeed", R.drawable.playbutton));
-        music.add(new Details(R.drawable.drake,"Drake", "I'm Upset", R.drawable.playbutton));
-        music.add(new Details(R.drawable.nickiminaj,"Nicki Minaj", "Rich Sex", R.drawable.playbutton));
-        music.add(new Details(R.drawable.jayrock,"Jay Rock", "WIN", R.drawable.playbutton));
-        music.add(new Details(R.drawable.geazy,"G-Eazy", "1942", R.drawable.playbutton));
-        music.add(new Details(R.drawable.travisscott,"Travis Scott", "Watch", R.drawable.playbutton));
-        music.add(new Details(R.drawable.tydollasign,"Ty Dolla $ign", "Clout", R.drawable.playbutton));
+        ArrayList <MusicDetails> music = new ArrayList <>();
+        music.add(new MusicDetails(R.drawable.ericb,"Eric B. & Rakim", "Don't Sweat The Technique", R.drawable.playbutton));
+        music.add(new MusicDetails(R.drawable.twochainz,"2 Chains", "Bigger Than You", R.drawable.playbutton));
+        music.add(new MusicDetails(R.drawable.kanye,"Kanye West", "All Mine", R.drawable.playbutton));
+        music.add(new MusicDetails(R.drawable.lilbaby,"Lil Baby", "Yes Indeed", R.drawable.playbutton));
+        music.add(new MusicDetails(R.drawable.drake,"Drake", "I'm Upset", R.drawable.playbutton));
+        music.add(new MusicDetails(R.drawable.nickiminaj,"Nicki Minaj", "Rich Sex", R.drawable.playbutton));
+        music.add(new MusicDetails(R.drawable.jayrock,"Jay Rock", "WIN", R.drawable.playbutton));
+        music.add(new MusicDetails(R.drawable.geazy,"G-Eazy", "1942", R.drawable.playbutton));
+        music.add(new MusicDetails(R.drawable.travisscott,"Travis Scott", "Watch", R.drawable.playbutton));
+        music.add(new MusicDetails(R.drawable.tydollasign,"Ty Dolla $ign", "Clout", R.drawable.playbutton));
 
-        WordAdapter adapter = new WordAdapter(this, music);
+        MusicDetailsAdapter adapter = new MusicDetailsAdapter(this, music);
 
         ListView listView = findViewById(R.id.list);
 
