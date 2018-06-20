@@ -1,26 +1,41 @@
 package com.encounterfitness.musicapp;
 
 public class Details {
-    //Default translation string for the word
+    //Title of the song
     private String mSongTitle;
 
-    //Miwok translation string for the word
+    //Artist of the song
     private String mSongArtist;
 
-    //Create a new Word object
-    public Details(String songArtist, String songTitle){
+    // Play button image ID
+    private int mPlaybuttonId;
+
+    //Album Cover image ID
+    private int mAlbumCoverId;
+
+    //Create a new song item
+    public Details(int albumCoverId, String songArtist, String songTitle, int playButtonId){
         mSongTitle = songTitle;
         mSongArtist = songArtist;
+        mPlaybuttonId = playButtonId;
+        mAlbumCoverId = albumCoverId;
+
     }
 
-    //Get the default translation of the word
+    //Get the song title
     public String getSongTitle(){
         return mSongTitle;
     }
 
-    //Get the Miwok translation of the word
+    //Get the song artist
 
     public String getSongArtist() {
         return mSongArtist;
     }
+
+    //Get the play button image
+    public int getPlayButtonId() {return mPlaybuttonId; }
+
+    //Get the album cover image
+    public int getAlbumCoverId() {return mAlbumCoverId; }
 }

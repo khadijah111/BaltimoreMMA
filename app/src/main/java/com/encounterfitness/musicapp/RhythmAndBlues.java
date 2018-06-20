@@ -11,24 +11,24 @@ public class RhythmAndBlues extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.word_list);
+        setContentView(R.layout.song_list);
 
         //create an arraylist and add the Artist and Title
         ArrayList <Details> music = new ArrayList <>();
-        music.add(new Details ("Ray Charles", "Early In the Morning"));
-        music.add(new Details("Bettye Swann", "I'd Rather Go Blind"));
-        music.add(new Details("Buddy Guy, Junior Wells", "Bad Bad Whiskey"));
-        music.add(new Details("Big Joe Turner", "Tv Mama"));
-        music.add(new Details("Freddie King", "Stumble"));
-        music.add(new Details("Aretha Franklin", "A Song For You"));
-        music.add(new Details("Little Richard", "Freedom Blues"));
-        music.add(new Details("Canned Heat", "I Need Someone"));
-        music.add(new Details("The Paul Butterfield Blues Band", "Born In Chicago"));
-        music.add(new Details("Carla Thomas", "Red Rooster"));
+        music.add(new Details (R.drawable.raycharles,"Ray Charles", "Early In the Morning", R.drawable.playbutton));
+        music.add(new Details(R.drawable.bettyswann,"Bettye Swann", "I'd Rather Go Blind", R.drawable.playbutton));
+        music.add(new Details(R.drawable.buddyguy,"Buddy Guy, Junior Wells", "Bad Bad Whiskey", R.drawable.playbutton));
+        music.add(new Details(R.drawable.joeturner,"Big Joe Turner", "Tv Mama", R.drawable.playbutton));
+        music.add(new Details(R.drawable.freddieking,"Freddie King", "Stumble", R.drawable.playbutton));
+        music.add(new Details(R.drawable.arethafranklin,"Aretha Franklin", "A Song For You", R.drawable.playbutton));
+        music.add(new Details(R.drawable.littlerichard,"Little Richard", "Freedom Blues", R.drawable.playbutton));
+        music.add(new Details(R.drawable.cannedheat,"Canned Heat", "I Need Someone", R.drawable.playbutton));
+        music.add(new Details(R.drawable.paulbutterfield,"The Paul Butterfield Blues Band", "Born In Chicago", R.drawable.playbutton));
+        music.add(new Details(R.drawable.carlathomas,"Carla Thomas", "Red Rooster", R.drawable.playbutton));
 
         WordAdapter adapter = new WordAdapter(this, music);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         listView.setAdapter(adapter);
     }

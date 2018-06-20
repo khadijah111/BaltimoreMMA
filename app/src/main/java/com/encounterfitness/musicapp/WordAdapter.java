@@ -16,7 +16,7 @@ public class WordAdapter extends ArrayAdapter <Details> {
     public WordAdapter(Activity context, ArrayList<Details> words) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
-        // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
+        // Because this is a custom adapter for two TextViews and 2 ImageViews, the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0.
         super(context, 0, words);
     }
@@ -27,26 +27,33 @@ public class WordAdapter extends ArrayAdapter <Details> {
         View listItemView = convertView;
         if(listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_item, parent, false);
+                    R.layout.list_layout, parent, false);
         }
 
-        // Get the {@link AndroidFlavor} object located at this position in the list
-        Details currentWord = getItem(position);
+        // Get the song object located at this position in the list
+        Details currentSong = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the Miwok word
-        TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_textView);
-        // Get the Miwok word from the current Word object and
-        // set this text on the name TextView
-        miwokTextView.setText(currentWord.getSongTitle());
+        // Find the TextView in the list_layout.xml with the titile
+        TextView titleTextView = listItemView.findViewById(R.id.title_textView);
+        // Get the title from the current object and set this text on the title TextView
+        titleTextView.setText(currentSong.getSongTitle());
 
-        // Find the TextView in the list_item.xml layout with the ID version_number
-        TextView englishTextView = (TextView) listItemView.findViewById(R.id.english_textView);
-        // Get the version number from the current AndroidFlavor object and
-        // set this text on the number TextView
-        englishTextView.setText(currentWord.getSongArtist());
+        // Find the TextView in the list_layout.xml with the artists
+        TextView authorTextView = listItemView.findViewById(R.id.artist_textView);
+        // Get the artist from the current object and set this text on the artist TextView
+        authorTextView.setText(currentSong.getSongArtist());
 
-        // Return the whole list item layout (containing 2 TextViews and an ImageView)
-        // so that it can be shown in the ListView
+        // Find the ImageView in the list_layout.xml with the ID play_button
+        ImageView iconView = listItemView.findViewById(R.id.play_button);
+        // Get the image from the current object and set this image on the ID play_button
+        iconView.setImageResource(currentSong.getPlayButtonId());
+
+        // Find the ImageView in the list_layout.xml layout with the ID album_cover
+        ImageView iconViewB = listItemView.findViewById(R.id.album_cover);
+        // Get the image from the current object and set this image on the ID album_cover
+        iconViewB.setImageResource(currentSong.getAlbumCoverId());
+
+        // Return the whole list item layout (containing 2 TextViews and 2 ImageViews) so that it can be shown in the ListView
         return listItemView;
     }
 }

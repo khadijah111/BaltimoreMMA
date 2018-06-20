@@ -11,24 +11,24 @@ public class Rap extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.word_list);
+        setContentView(R.layout.song_list);
 
         //create an arraylist and add the Artist and Title
         ArrayList <Details> music = new ArrayList <>();
-        music.add(new Details ("Eric B. & Rakim", "Don't Sweat The Technique"));
-        music.add(new Details("2 Chains", "Bigger Than You"));
-        music.add(new Details("Kanye West", "All Mine"));
-        music.add(new Details("Lil Baby", "Yes Indeed"));
-        music.add(new Details("Drake", "I'm Upset"));
-        music.add(new Details("Nicki Minaj", "Rich Sex"));
-        music.add(new Details("Jay Rock", "WIN"));
-        music.add(new Details("G-Eazy", "1942"));
-        music.add(new Details("Travis Scott", "Watch"));
-        music.add(new Details("Ty Dolla $ign", "Clout"));
+        music.add(new Details (R.drawable.ericb,"Eric B. & Rakim", "Don't Sweat The Technique", R.drawable.playbutton));
+        music.add(new Details(R.drawable.twochainz,"2 Chains", "Bigger Than You", R.drawable.playbutton));
+        music.add(new Details(R.drawable.kanye,"Kanye West", "All Mine", R.drawable.playbutton));
+        music.add(new Details(R.drawable.lilbaby,"Lil Baby", "Yes Indeed", R.drawable.playbutton));
+        music.add(new Details(R.drawable.drake,"Drake", "I'm Upset", R.drawable.playbutton));
+        music.add(new Details(R.drawable.nickiminaj,"Nicki Minaj", "Rich Sex", R.drawable.playbutton));
+        music.add(new Details(R.drawable.jayrock,"Jay Rock", "WIN", R.drawable.playbutton));
+        music.add(new Details(R.drawable.geazy,"G-Eazy", "1942", R.drawable.playbutton));
+        music.add(new Details(R.drawable.travisscott,"Travis Scott", "Watch", R.drawable.playbutton));
+        music.add(new Details(R.drawable.tydollasign,"Ty Dolla $ign", "Clout", R.drawable.playbutton));
 
         WordAdapter adapter = new WordAdapter(this, music);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         listView.setAdapter(adapter);
     }

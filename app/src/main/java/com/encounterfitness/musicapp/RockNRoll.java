@@ -11,24 +11,24 @@ public class RockNRoll extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.word_list);
+        setContentView(R.layout.song_list);
 
         //create an arraylist and add the Artist and Title
         ArrayList <Details> music = new ArrayList <>();
-        music.add(new Details ("Metallica", "Enter Sandman"));
-        music.add(new Details("Godsmack", "Voodoo"));
-        music.add(new Details("Drowning Pool", "Sinner"));
-        music.add(new Details("Imagine Dragons", "Radioactive"));
-        music.add(new Details("Blur", "Song 2"));
-        music.add(new Details("Five Finger Death Punch", "Bad Company"));
-        music.add(new Details("Volbeat", "A Warrior's Call"));
-        music.add(new Details("Guns N' Roses", "Welcome To The Jungle"));
-        music.add(new Details("Chevelle", "The Red"));
-        music.add(new Details("Nickleback", "This Means War"));
+        music.add(new Details (R.drawable.metallica,"Metallica", "Enter Sandman", R.drawable.playbutton));
+        music.add(new Details(R.drawable.godsmack,"Godsmack", "Voodoo", R.drawable.playbutton));
+        music.add(new Details(R.drawable.drowningpool,"Drowning Pool", "Sinner", R.drawable.playbutton));
+        music.add(new Details(R.drawable.imaginedragons,"Imagine Dragons", "Radioactive", R.drawable.playbutton));
+        music.add(new Details(R.drawable.blur,"Blur", "Song 2", R.drawable.playbutton));
+        music.add(new Details(R.drawable.fivefingerdeathpunch,"Five Finger Death Punch", "Bad Company", R.drawable.playbutton));
+        music.add(new Details(R.drawable.volbeat,"Volbeat", "A Warrior's Call", R.drawable.playbutton));
+        music.add(new Details(R.drawable.gunsandroses,"Guns N' Roses", "Welcome To The Jungle", R.drawable.playbutton));
+        music.add(new Details(R.drawable.chevelle,"Chevelle", "The Red", R.drawable.playbutton));
+        music.add(new Details(R.drawable.nickelback,"Nickleback", "This Means War", R.drawable.playbutton));
 
         WordAdapter adapter = new WordAdapter(this, music);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         listView.setAdapter(adapter);
     }
