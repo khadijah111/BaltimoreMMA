@@ -1,4 +1,4 @@
-package com.encounterfitness.musicapp;
+package com.encounterfitness.baltimoremma;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

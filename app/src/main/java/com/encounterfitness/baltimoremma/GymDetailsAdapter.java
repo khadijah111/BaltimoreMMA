@@ -1,4 +1,4 @@
-package com.encounterfitness.musicapp;
+package com.encounterfitness.baltimoremma;
 
 import android.app.Activity;
 
@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MusicDetailsAdapter extends ArrayAdapter <MusicDetails> {
+public class GymDetailsAdapter extends ArrayAdapter <GymDetails> {
 
-    public MusicDetailsAdapter(Activity context, ArrayList<MusicDetails> words) {
+    public GymDetailsAdapter(Activity context, ArrayList<GymDetails> words) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and 2 ImageViews, the adapter is not
@@ -31,27 +31,22 @@ public class MusicDetailsAdapter extends ArrayAdapter <MusicDetails> {
         }
 
         // Get the song object located at this position in the list
-        MusicDetails currentSong = getItem(position);
+        GymDetails currentGym = getItem(position);
 
-        // Find the TextView in the list_layout.xml with the titile
-        TextView titleTextView = listItemView.findViewById(R.id.title_textView);
+        // Find the TextView in the list_layout.xml with the title
+        TextView titleTextView = listItemView.findViewById(R.id.gymname_textView);
         // Get the title from the current object and set this text on the title TextView
-        titleTextView.setText(currentSong.getSongTitle());
+        titleTextView.setText(currentGym.getmGymName());
 
         // Find the TextView in the list_layout.xml with the artists
-        TextView authorTextView = listItemView.findViewById(R.id.artist_textView);
+        TextView authorTextView = listItemView.findViewById(R.id.gymaddress_textView);
         // Get the artist from the current object and set this text on the artist TextView
-        authorTextView.setText(currentSong.getSongArtist());
-
-        // Find the ImageView in the list_layout.xml with the ID play_button
-        ImageView iconView = listItemView.findViewById(R.id.play_button);
-        // Get the image from the current object and set this image on the ID play_button
-        iconView.setImageResource(currentSong.getPlayButtonId());
+        authorTextView.setText(currentGym.getmGymAddress());
 
         // Find the ImageView in the list_layout.xml layout with the ID album_cover
-        ImageView iconViewB = listItemView.findViewById(R.id.album_cover);
+        ImageView iconViewB = listItemView.findViewById(R.id.gympic_imageview);
         // Get the image from the current object and set this image on the ID album_cover
-        iconViewB.setImageResource(currentSong.getAlbumCoverId());
+        iconViewB.setImageResource(currentGym.getmGymImageId());
 
         // Return the whole list item layout (containing 2 TextViews and 2 ImageViews) so that it can be shown in the ListView
         return listItemView;

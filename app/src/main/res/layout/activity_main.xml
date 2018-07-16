@@ -14,7 +14,7 @@
         android:id="@+id/rockTextView"
         style="@style/MainActivityStyle"
         android:background="@color/rock_n_roll"
-        android:text="@string/rockNroll"
+        android:text="@string/boxing"
         android:fontFamily="casual"
         />
 
@@ -22,7 +22,7 @@
         android:id="@+id/countryTextView"
         style="@style/MainActivityStyle"
         android:background="@color/country"
-        android:text="@string/country"
+        android:text="@string/bjj"
         android:fontFamily="monospace"
         />
 
@@ -30,7 +30,7 @@
         android:id="@+id/rNbTextView"
         style="@style/MainActivityStyle"
         android:background="@color/r_n_b"
-        android:text="@string/rhythmNBlues"
+        android:text="@string/kidfriendly"
         android:fontFamily="sans-serif-smallcaps"
         />
 
@@ -38,7 +38,7 @@
         android:id="@+id/rapTextView"
         style="@style/MainActivityStyle"
         android:background="@color/rap"
-        android:text="@string/rap"
+        android:text="@string/muaythia"
         />
 
     </LinearLayout>

@@ -1,4 +1,4 @@
-package com.encounterfitness.musicapp;
+package com.encounterfitness.baltimoremma;
 
 import org.junit.Test;
 

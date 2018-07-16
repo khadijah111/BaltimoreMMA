@@ -1,4 +1,4 @@
-package com.encounterfitness.musicapp;
+package com.encounterfitness.baltimoremma;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the numbers View is clicked on.
             @Override
             public void onClick(View view) {
-                Intent rockIntent = new Intent(MainActivity.this, RockNRoll.class);
+                Intent rockIntent = new Intent(MainActivity.this, Boxing.class);
                 startActivity(rockIntent);
             }
         });
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the numbers View is clicked on.
             @Override
             public void onClick(View view) {
-                Intent countryIntent = new Intent(MainActivity.this, Country.class);
+                Intent countryIntent = new Intent(MainActivity.this, BrazilianJiuJitsu.class);
                 startActivity(countryIntent);
             }
         });
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the numbers View is clicked on.
             @Override
             public void onClick(View view) {
-                Intent rNbIntent = new Intent(MainActivity.this, RhythmAndBlues.class);
+                Intent rNbIntent = new Intent(MainActivity.this, KidFriendly.class);
                 startActivity(rNbIntent);
             }
         });
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             // The code in this method will be executed when the numbers View is clicked on.
             @Override
             public void onClick(View view) {
-                Intent rapIntent = new Intent(MainActivity.this, Rap.class);
+                Intent rapIntent = new Intent(MainActivity.this, MuayThai.class);
                 startActivity(rapIntent);
             }
         });

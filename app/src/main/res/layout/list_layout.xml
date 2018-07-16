@@ -7,7 +7,7 @@
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/album_cover"
+        android:id="@+id/gympic_imageview"
         android:layout_width="50dp"
         android:layout_height="50dp"/>
 
@@ -19,23 +19,18 @@
         android:paddingRight="16dp">
 
     <TextView
-        android:id="@+id/title_textView"
+        android:id="@+id/gymname_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/ArtistStyle"
         tools:text="Paint it Black"/>
 
     <TextView
-        android:id="@+id/artist_textView"
+        android:id="@+id/gymaddress_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="The Rolling Stones"/>
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/play_button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"/>
 
 </LinearLayout>

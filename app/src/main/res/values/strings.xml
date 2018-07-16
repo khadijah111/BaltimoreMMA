@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Music App</string>
-    <string name="rockNroll">Rock and Roll</string>
-    <string name="country">Country</string>
-    <string name="rhythmNBlues">Rhythm and Blues</string>
-    <string name="rap">Rap</string>
-    <string name="now_playing">Now Playing</string>
+    <string name="app_name">MMA of Baltimore</string>
+    <string name="boxing">Boxing</string>
+    <string name="bjj">Brazilian Jiu Jitsu</string>
+    <string name="kidfriendly">Kid Friendly</string>
+    <string name="muaythia">Muay Thai</string>
+
 </resources>
