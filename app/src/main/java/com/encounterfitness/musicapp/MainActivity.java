@@ -67,18 +67,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Find the View that shows play now
-        TextView playnow = findViewById(R.id.playingNowTextView);
-
-        //Set a click listener on the play now View
-        playnow.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent playnowwIntent = new Intent(MainActivity.this, PlayNow.class);
-                startActivity(playnowwIntent);
-            }
-        });
     }
 
 }

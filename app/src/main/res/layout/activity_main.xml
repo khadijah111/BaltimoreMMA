@@ -41,12 +41,6 @@
         android:text="@string/rap"
         />
 
-        <TextView
-            android:id="@+id/playingNowTextView"
-            style="@style/MainActivityStyle"
-            android:background="@color/now_playing"
-            android:text="@string/now_playing"
-            />
     </LinearLayout>
 
 </ScrollView>

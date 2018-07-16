@@ -17,13 +17,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".RockNRoll"
-            android:label="@string/rockNroll"/>
+            android:label="@string/rockNroll"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".Country"
-            android:label="@string/country"/>
+            android:label="@string/country"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".RhythmAndBlues"
-            android:label="@string/rhythmNBlues"/>
+            android:label="@string/rhythmNBlues"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".Rap"
-            android:label="@string/rap">
+            android:label="@string/rap"
+            android:parentActivityName=".MainActivity">
         </activity>
     </application>
 
