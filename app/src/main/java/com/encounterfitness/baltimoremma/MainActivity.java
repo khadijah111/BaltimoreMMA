@@ -1,10 +1,10 @@
 package com.encounterfitness.baltimoremma;
 
-import android.content.Intent;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.design.widget.TabLayout;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,60 +12,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Set the content of the activity to use the gym_selection_layout.xmlout.xml layout file
         setContentView(R.layout.activity_main);
 
-        // Find the View that shows the rock and roll music list
-        TextView rock = findViewById(R.id.rockTextView);
 
-        // Set a click listener on the rock and roll View
-        rock.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent rockIntent = new Intent(MainActivity.this, Boxing.class);
-                startActivity(rockIntent);
-            }
-        });
+        // Find the view pager that will allow the user to swipe between fragments
+        ViewPager viewPager = findViewById(R.id.viewpager);
 
+        // Create an adapter that knows which fragment should be shown on each page
+        GymFragmentPagerAdapter adapter = new GymFragmentPagerAdapter(this, getSupportFragmentManager());
 
-        // Find the View that shows the country music list
-        TextView country = findViewById(R.id.countryTextView);
+        // Set the adapter onto the view pager
+        viewPager.setAdapter(adapter);
 
-        //Set a click listener on the country View
-        country.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent countryIntent = new Intent(MainActivity.this, BrazilianJiuJitsu.class);
-                startActivity(countryIntent);
-            }
-        });
+        // Find the tab layout that shows the tabs
+        TabLayout tabLayout = findViewById(R.id.tabs);
 
-        // Find the View that shows the rhythm and blues music list
-        TextView rhythmNblues = findViewById(R.id.rNbTextView);
-
-        //Set a click listener on the rhythm and blues View
-        rhythmNblues.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent rNbIntent = new Intent(MainActivity.this, KidFriendly.class);
-                startActivity(rNbIntent);
-            }
-        });
-
-        // Find the View that shows the rap music list
-        TextView rap = findViewById(R.id.rapTextView);
-
-        //Set a click listener on the rap View
-        rap.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent rapIntent = new Intent(MainActivity.this, MuayThai.class);
-                startActivity(rapIntent);
-            }
-        });
+        // Connect the tab layout with the view pager. This will
+        //   1. Update the tab layout when the view pager is swiped
+        //   2. Update the view pager when a tab is selected
+        //   3. Set the tab layout's tab names with the view pager's adapter's titles
+        //      by calling onPageTitle()
+        tabLayout.setupWithViewPager(viewPager);
 
     }
 

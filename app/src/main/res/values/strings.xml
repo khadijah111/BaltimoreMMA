@@ -4,9 +4,8 @@
     <string name="bjj">Brazilian Jiu Jitsu</string>
     <string name="kidfriendly">Kid Friendly</string>
     <string name="muaythia">Muay Thai</string>
+    <string name="selectionscreen">Selection Screen</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

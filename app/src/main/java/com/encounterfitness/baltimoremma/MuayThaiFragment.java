@@ -24,9 +24,9 @@ public class MuayThaiFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.song_list, container, false);
+        View rootView = inflater.inflate(R.layout.gym_list, container, false);
 
-        //create an arraylist and add the Artist and Title
+        //create an arraylist and add the Gym name, address and image if available
         final ArrayList<GymDetails> gyms = new ArrayList<>();
         gyms.add(new GymDetails(R.drawable.amt,"7214 Harford Road Parkville,Maryland 21234", "American Muay Thai"));
         gyms.add(new GymDetails(R.drawable.elitekickfight,"3000 Chestnut Ave, Baltimore, MD 21211", "Elite Kickfight"));

@@ -21,6 +21,4 @@
     <!--Background color for Rap-->
     <color name="rap">#6633CC</color>
 
-    <!--Background color for Now Playing-->
-    <color name="now_playing">#6600ff</color>
 </resources>

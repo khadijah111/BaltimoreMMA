@@ -22,14 +22,14 @@
         android:id="@+id/gymname_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/ArtistStyle"
-        tools:text="Paint it Black"/>
+        style="@style/GymNameStyle"
+        tools:text="Gym Name"/>
 
     <TextView
         android:id="@+id/gymaddress_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="The Rolling Stones"/>
+        tools:text="Gym address info"/>
 
     </LinearLayout>
 
