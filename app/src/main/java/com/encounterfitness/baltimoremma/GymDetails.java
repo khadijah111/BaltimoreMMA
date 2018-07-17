@@ -10,12 +10,17 @@ public class GymDetails {
     //Gym image ID
     private int mGymImageId;
 
-    //Create a new song item
+    //Create a new gym item
     public GymDetails(int gymImageID, String gymAddress, String gymName){
         mGymName = gymName;
         mGymAddress = gymAddress;
         mGymImageId = gymImageID;
+    }
 
+    //Create a new gym item without an image
+    public GymDetails(String gymAddress, String gymName){
+        mGymName = gymName;
+        mGymAddress = gymAddress;
     }
 
     //Get the name of the gym
