@@ -28,13 +28,12 @@ public class GymDetails {
         return mGymName;
     }
 
-    //Get the song artist
-
+    //Get the address of the gym
     public String getmGymAddress() {
         return mGymAddress;
     }
 
 
-    //Get the album cover image
+    //Get the gym image if there is one
     public int getmGymImageId() {return mGymImageId; }
 }
