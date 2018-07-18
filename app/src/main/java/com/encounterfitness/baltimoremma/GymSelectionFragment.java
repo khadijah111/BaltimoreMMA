@@ -50,6 +50,7 @@ public class GymSelectionFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent bjjIntent = new Intent(GymSelection.this, BrazilianJiuJitsu.class);
+                //Intent bjjIntent = new Intent(getActivity(), BrazilianJiuJitsu.class);
                 startActivity(bjjIntent);
             }
         });
@@ -63,6 +64,8 @@ public class GymSelectionFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent kidsIntent = new Intent(GymSelection.this, KidFriendly.class);
+               //Intent bjjIntent = new Intent(getActivity(), KidFriendly.class);
+
                 startActivity(kidsIntent);
             }
         });
@@ -76,6 +79,8 @@ public class GymSelectionFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent muaythaiIntent = new Intent(GymSelection.this, MuayThai.class);
+                //Intent bjjIntent = new Intent(getActivity(), MuayThai.class);
+
                 startActivity(muaythaiIntent);
             }
         });
